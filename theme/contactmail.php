@@ -6,30 +6,8 @@ $email = $_POST['email'];
 if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
     die("Header injection detected!");
 } else {
-    //Load the value of departament select in a variable
-    $youremail = $_POST['departament'];
-    //Choose a recipient according to set value of "departament"
-    switch ($youremail) {
-        case 'to1':
-            $youremail = 'youremail_1@domain.com';
-            break;
-        case 'to2':
-            $youremail = 'youremail_2@domain.com';
-            break;
-        case 'to3':
-            $youremail = 'youremail_3@domain.com';
-            break;
-        case 'to4':
-            $youremail = 'youremail_4@domain.com';
-            break;
-        case 'to5':
-            $youremail = 'youremail_5@domain.com';
-            break;
-        case 'to6':
-            $youremail = 'youremail_6@domain.com';
-            break;
-        //and more if you need...
-    }
+    //Put your email address here
+    $youremail = 'info@sicpsicologia.com';
     
     //Prepare a "pretty" version of the message
     //Important: if you added any form fields to the HTML, you will need to add them here also
@@ -61,7 +39,7 @@ if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
-        <title>CORPBOOT | Bootstrap Business Template - Contact</title>
+        <title>SIC | Psicología - Contacto</title>
 
         <!-- CSS
         ===============================================================-->
@@ -113,40 +91,23 @@ if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <i class="fa fa-angle-down small"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="about.html">About Us 1</a></li>
-                                <li><a href="about-2.html">About Us 2</a></li>
-                            </ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li>
+                            <a href="nosotros.html">Nosotros</a></li> 
                         </li>
-                        <li><a href="services.html">Services</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <i class="fa fa-angle-down small"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="portfolio.html">Default</a></li>
-                                <li><a href="portfolio-images.html">Images Lightbox</a></li>
-                                <li><a href="portfolio-iframes.html">Iframes Lightbox</a></li>
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios<i class="fa fa-angle-down small"></i></a>
+                             <ul class="dropdown-menu" role="menu">
+                                <li><a href="laboral.html">Psicología Laboral</a></li>
+                                <li><a href="clinico.html">Evaluaciones Psicológicas Clínicas</a></li>
                             </ul>
-                        </li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <i class="fa fa-angle-down small"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-left.html">Blog Left Sidebar</a></li>
-                                <li><a href="blogpost.html">Single Right Sidebar</a></li>
-                                <li><a href="blogpost-left.html">Single Left Sidebar</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="elements.html">Elements</a></li>
-                        <li class="active dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <i class="fa fa-angle-down small"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="contact.html">Contact Option 1</a></li>
-                                <li><a href="contact-simple.html">Contact Option 2</a></li>
-                            </ul>
+                        </li>               
+                        
+                       
+                    
+                        <li class="active">
+                            <a href="contacto.html">Contacto</a>
+                           
                         </li>
                     </ul>
                 </div>
@@ -158,8 +119,8 @@ if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
         <div class="breadcrumb-container">
             <div class="container text-right">
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Contact <i class="fa fa-arrow-down ml5"></i></li>
+                    <!--<li><a href="index.html">Inicio</a></li>
+                    <li class="active">Contacto <i class="fa fa-arrow-down ml5"></i></li>-->
                 </ol>
             </div>
         </div>
@@ -168,27 +129,27 @@ if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
         ===============================================================-->
         <section class="bg-white">
             <div class="container">
-                <div class="row">
+                <div class="row wow fadeIn">
                     <div class="col-md-12">
                         <div class="title">
-                            <h2>Contact Us</h2>
+                            <h2>Contáctanos</h2>
                         </div>
                     </div>
                     <!-- CONTACT INFO -->
                     <div class="col-sm-12 col-md-5 cinfo">
                         <div id="map-canvas"></div>
                         <address>
-                            <p><i class="fa fa-map-marker"></i>8578 NW 70th Street, 33166, Miami - Florida, USA</p>
-                            <p><i class="fa fa-phone"></i>(+385) 593 6888</p>
-                            <p><i class="fa fa-envelope"></i>support@templatespremium.net</p>
-                            <p><i class="fa fa-skype"></i>corpboot</p>
+                            <p><i class="fa fa-map-marker"></i>Loma Panorámica #301-2 | Col. Loma Larga Los Magueyes | Monterrey, N.L. | C.P. 64710 |</p>
+                            <p><i class="fa fa-phone"></i>8342-6412 / 8342-6514</p>
+                            <p><i class="fa fa-envelope"></i>sic_psicologia@att.net.mx </p>
+                        
                         </address>
                         <div class="visible-xs-block visible-sm-block pt20"></div>
                     </div><!-- /Contact Info -->
                     <!-- CONTACT FORM -->
                     <div class="col-sm-12 col-md-7">
-                        <h4 class="text-success">Successful validation</h4>
-                        <p>Your email has been sent successfully.</p>
+                        <h4 class="text-success">Validación completa.</h4>
+                        <p>Su mensaje se ha enviado correctamente.</p>
                     </div><!-- /Contact Form -->
                 </div><!-- /row -->
             </div><!-- /container -->
@@ -196,116 +157,30 @@ if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
 
         <!-- FOOTER
         ===============================================================-->
-        <footer>
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-widget col-sm-12 col-md-4">
-                            <h3>About us</h3>
-                            <p><a href="about.html">Corpboot</a>, is tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker"></i> 8578 NW 70th Street, 33166, Miami - Florida, USA</li>
-                                <li class="number"><i class="fa fa-phone"></i> (+385) 593 6888</li>
-                                <li><i class="fa fa-envelope"></i> support@templatespremium.net</li>
-                                <li><i class="fa fa-skype"></i> corpboot</li>
-                            </ul>
-                            <div class="visible-xs-block visible-sm-block pt20"></div>
-                        </div>
-                        <div class="footer-widget col-sm-6 col-md-4">
-                            <h3>Photo Gallery</h3>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 1">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 2">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 3">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 4">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 5">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 6">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 7">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 8">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 9">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 10">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 11">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <a href="http://placehold.it/900x600/BDC3C7/ffffff" class="gallery" title="Photo Gallery 12">
-                                <img src="http://placehold.it/70x50/BDC3C7/ffffff" alt="Gallery thumbnail">
-                            </a>
-                            <div class="visible-xs-block visible-sm-block pt20"></div>
-                        </div>
-                        <div class="footer-widget col-sm-6 col-md-4">
-                            <h3>Newsletter Registration</h3>
-                            <p>Subscribe today to receive the latest <strong>Corpboot</strong> news via email. You may unsubscribe from this service at any time.</p>
-                            <!-- Newsletter Form-->
-                            <form method="get">
-                                <div class="input-group newsletter">
-                                    <label class="sr-only" for="subscribe-email">Enter your email...</label>
-                                    <input type="email" class="form-control" id="subscribe-email" placeholder="Enter your email...">
-                                    <span class="input-group-btn">
-                                        <button type="submit" class="btn"><i class="fa fa-paper-plane-o"></i></button>
-                                    </span>
-                                </div>
-                            </form>
-                            <p class="newsletter-desc"><strong>No spam:</strong> consectetur adipisicing elit lorem ipsum.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
+            <footer>
+            
+           <div class="footer-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 social">
                             <ul class="list-inline social">
                                 <li>
-                                    <a href="" target="_blank">
+                                    <a href="https://www.facebook.com/SicPsicologia/" target="_blank">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" target="_blank">
+                                    <a href="https://www.linkedin.com/company/27029345/" target="_blank">
                                         <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" target="_blank">
-                                        <i class="fa fa-youtube"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" target="_blank">
-                                        <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="col-sm-6 credits">
-                            <p>&copy; CORPBOOT 2016. All Rights Reserved.</p>
+                            <p>&copy; SIC Psicología 2017. Todos los derechos reservados.</p>
                             <p class="small">
                                 <i class="fa fa-angle-right"></i> 
-                                Developed by: <a href="#" target="_blank">Your Company</a>
+                                Diseño por: <a href="http://vanuva.com" target="_blank">Vanuva - Design Agency</a>
                             </p>
                         </div>
                     </div>
