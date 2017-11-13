@@ -542,7 +542,7 @@ $document.on('ready', function() {
         });
 
         //The Window it show after press click in marker icon
-        var contentString = '<div id="mapcontent">'+'<h4 class="m0 color6">Hello!</h4><p>We are here...</p></div>';
+        var contentString = '<div id="mapcontent">'+'<h4 class="m0 color6">Hola!</h4><p>Estamos aquí...</p></div>';
         var infowindow = new google.maps.InfoWindow({
                 maxWidth: 320,
                 content: contentString

@@ -206,7 +206,7 @@ if ( preg_match( "/[\r\n]/", $name ) || preg_match( "/[\r\n]/", $email ) ){
         <script src="assets/js/form-validation.js"></script>
         <!-- Google Maps -->
         <!-- Get your API here https://developers.google.com/maps/documentation/javascript/?hl=es -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj6Jq8SfyRfya_m3WqkIu4x2cRH_bE3g8"></script>
         <!-- Flexslider -->
         <script src="assets/js/jquery.flexslider-min.js"></script>
         <!-- Placeholder for IE9 -->
